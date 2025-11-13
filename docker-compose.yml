@@ -25,9 +25,6 @@ services:
       - static_volume:/app/staticfiles
     ports:
       - "8000:8000"
-    environment:
-      - DATABASE_URL=postgresql://chatflow:chatflow123@db:5432/chatflow
-      - DEBUG=True
     depends_on:
       db:
         condition: service_healthy
