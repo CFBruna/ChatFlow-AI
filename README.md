@@ -1,10 +1,9 @@
-
-# Assistente Tupiniquim
+# ChatFlow AI
 
 ![Demonstração](static/demo.git.gif)
 
 📝 **Descrição**  
-O Assistente Tupiniquim é um projeto de chatbot desenvolvido em Django. Ele permite que usuários se cadastrem, façam login e interajam com um assistente virtual. O histórico das conversas é salvo, permitindo que os usuários vejam suas interações passadas.
+O ChatFlow AI é um projeto de chatbot desenvolvido em Django. Ele permite que usuários se cadastrem, façam login e interajam com um assistente virtual. O histórico das conversas é salvo, permitindo que os usuários vejam suas interações passadas.
 
 O projeto utiliza a API da OpenAI para gerar as respostas do chatbot, proporcionando conversas inteligentes e fluidas.
 
@@ -34,8 +33,8 @@ Siga os passos abaixo para executar o projeto localmente.
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/assistente-tupiniquim.git
-cd assistente-tupiniquim
+git clone https://github.com/seu-usuario/chatflow-ai.git
+cd chatflow-ai
 ```
 
 2. Crie e ative um ambiente virtual:
