@@ -1,89 +1,62 @@
+# ChatFlow AI
 
-# Assistente Tupiniquim
+![Demonstration](static/demo.git.gif)
 
-![Demonstração](static/demo.git.gif)
+📝 **Description**  
+ChatFlow AI is a chatbot project developed with Django. It allows users to register, log in, and interact with a virtual assistant powered by the Groq API. The conversation history is saved, allowing users to review their past interactions.
 
-📝 **Descrição**  
-O Assistente Tupiniquim é um projeto de chatbot desenvolvido em Django. Ele permite que usuários se cadastrem, façam login e interajam com um assistente virtual. O histórico das conversas é salvo, permitindo que os usuários vejam suas interações passadas.
+✨ **Features**  
+- **User Authentication:** A complete registration and login system.
+- **Intelligent Chatbot:** Real-time interaction with the Groq API.
+- **Conversation History:** Chats are saved and can be accessed by the user at any time.
+- **Simple Interface:** A clean and intuitive layout for a better user experience.
 
-O projeto utiliza a API da OpenAI para gerar as respostas do chatbot, proporcionando conversas inteligentes e fluidas.
+🚀 **Tech Stack**  
+- **Backend:** Python, Django
+- **Database:** PostgreSQL
+- **API:** Groq
+- **Containerization:** Docker, Docker Compose
 
-✨ **Funcionalidades**  
-- **Autenticação de Usuários:** Sistema completo de cadastro e login.  
-- **Chatbot Inteligente:** Interação em tempo real com o chatbot da OpenAI.  
-- **Histórico de Conversas:** As conversas são salvas e podem ser acessadas a qualquer momento pelo usuário.  
-- **Interface Simples:** Um layout limpo e intuitivo para uma melhor experiência do usuário.
+---
 
-🚀 **Tecnologias Utilizadas**  
-- **Backend:** Python, Django  
-- **Frontend:** HTML, CSS (Bootstrap)  
-- **API:** OpenAI  
-- **Banco de Dados:** SQLite3 (padrão do Django, pode ser alterado)
+⚙️ **Getting Started**  
+Follow the steps below to run the project locally using Docker.
 
-_Observação:_ O código HTML e o estilo da interface foram desenvolvidos com o auxílio de uma Inteligência Artificial, seguindo minhas instruções e refinamentos até alcançar o resultado atual.
+### Prerequisites  
+- Docker
+- Docker Compose
 
-⚙️ **Instalação e Execução**  
-Siga os passos abaixo para executar o projeto localmente.
+### Step-by-step Guide
 
-### Pré-requisitos  
-- Python 3.8+  
-- Pip (gerenciador de pacotes do Python)
+1.  **Clone the repository:**
 
-### Passo a passo  
+    ```bash
+    git clone https://github.com/CFBruna/chatflow-ai.git
+    cd chatflow-ai
+    ```
 
-1. Clone o repositório:
+2.  **Configure Your Environment:**  
+    Copy the example environment file and fill in your specific values (especially `GROQ_API_KEY`).
 
-```bash
-git clone https://github.com/seu-usuario/assistente-tupiniquim.git
-cd assistente-tupiniquim
-```
+    ```bash
+    cp .env.example .env
+    ```
 
-2. Crie e ative um ambiente virtual:
+3.  **Build and Run the Application:**  
+    Run the following command to build the Docker images and start the containers.
 
-```bash
-# Para Windows
-python -m venv venv
-.\venv\Scripts\activate
+    ```bash
+    docker compose up --build
+    ```
+    The `-d` flag can be added to run the containers in detached mode.
 
-# Para macOS/Linux
-python3 -m venv venv
-source venv/bin/activate
-```
+4.  **Access the Application:**  
+    Once the containers are running, open your browser and navigate to:  
+    [http://localhost:8000](http://localhost:8000)
 
-3. Instale as dependências:
+    The application should now be live. The first time you run it, Docker will build the necessary images, which may take a few minutes.
 
-```bash
-pip install -r requirements.txt
-```
+---
 
-4. Configure suas variáveis de ambiente:  
-Crie um arquivo `.env` na raiz do projeto (no mesmo nível que `manage.py`) e adicione sua chave da API da OpenAI:
-
-```env
-OPENAI_API_KEY="sua-chave-secreta-da-api-aqui"
-```
-
-5. Aplique as migrações do banco de dados:
-
-```bash
-python manage.py migrate
-```
-
-6. Crie um superusuário (para acessar o painel de admin):
-
-```bash
-python manage.py createsuperuser
-```
-Siga as instruções no terminal para criar seu usuário administrador.
-
-7. Execute o servidor de desenvolvimento:
-
-```bash
-python manage.py runserver
-```
-
-8. Abra seu navegador e acesse:  
-[http://127.0.0.1:8000/](http://127.0.0.1:8000/) para ver o projeto em ação!
-
-📜 **Licença**  
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+📜 **License**  
+This project is under the MIT License. See the `LICENSE` file for more details.

@@ -14,7 +14,7 @@
     --border-light: #f3f4f6;
     --border-color: #e5e7eb;
     --success-color: #10b981;
-    --danger-color: #ef4444; /* ADICIONADO: Cor para o botão de apagar */
+    --danger-color: #ef4444;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -472,7 +472,7 @@
     text-align: left;
     cursor: pointer;
     font-size: 0.875rem;
-    color: var(--text-primary); /* Cor padrão do texto */
+    color: var(--text-primary);
   }
   .action-menu-item:hover {
     background: var(--border-light);
@@ -502,7 +502,7 @@
           </svg>
           Histórico de Conversas
         </h1>
-        <p class="page-subtitle">Suas conversas com o Assistente Tupiniquim</p>
+        <p class="page-subtitle">Suas conversas com o ChatFlow AI</p>
       </div>
       <div class="header-actions">
         <a href="{% url 'create_new_chat' %}" class="new-chat-btn">
@@ -608,7 +608,7 @@
           </svg>
           <h2 class="empty-title">Nenhuma conversa ainda</h2>
           <p class="empty-subtitle">
-            Você ainda não iniciou nenhuma conversa com o Assistente Tupiniquim. 
+            Você ainda não iniciou nenhuma conversa com o ChatFlow AI. 
             Que tal começar uma nova conversa agora mesmo?
           </p>
           <a href="{% url 'create_new_chat' %}" class="empty-action">
@@ -671,7 +671,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let activeMenu = null;
 
   window.toggleActionMenu = function(event, conversationId) {
-    event.stopPropagation(); // Impede o clique de ir para o card e navegar
+    event.stopPropagation();
     const menu = document.getElementById(`menu-${conversationId}`);
     
     if (activeMenu && activeMenu !== menu) {
@@ -682,7 +682,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   window.renameConversation = function(event, conversationId, currentTitle) {
-    event.stopPropagation(); // Impede o clique de ir para o card
+    event.stopPropagation();
 
     const newTitle = prompt("Digite o novo título da conversa:", currentTitle);
 
